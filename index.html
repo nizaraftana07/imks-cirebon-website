@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMKS Cirebon - Ikatan Keluarga Mahasiswa Subang Cirebon</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Custom Palette Config -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        maroon: {
+                            DEFAULT: '#800000',
+                            dark: '#500000',
+                            light: '#a00000',
+                        },
+                        brownaccent: {
+                            DEFAULT: '#8C6239', /* Cokelat Kayu / Elegan */
+                            light: '#C49A45',   /* Cokelat Emas Terang */
+                            dark: '#5A3D20',    /* Cokelat Gelap */
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        html { scroll-behavior: smooth; }
+        .bg-pattern {
+            background-color: #660000;
+            background-image: radial-gradient(#800000 1px, transparent 1px);
+            background-size: 20px 20px;
+        }
+    </style>
+</head>
+<body class="bg-pattern text-white font-sans antialiased min-h-screen flex flex-col justify-between">
+
+    <!-- NAVBAR -->
+    <nav class="bg-maroon-dark border-b-2 border-brownaccent sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-20">
+                <div class="flex items-center gap-3">
+                    <div class="bg-white p-1.5 rounded-lg border border-brownaccent shadow-md flex items-center justify-center">
+                        <img src="Logo IMKS_3.png" alt="Logo IMKS Cirebon" class="h-10 w-auto object-contain" onerror="this.src='https://via.placeholder.com/150x50?text=IMKS+CIREBON'">
+                    </div>
+                    <div>
+                        <span class="text-xl font-extrabold text-white tracking-wider block leading-none">IMKS CIREBON</span>
+                        <span class="text-xs text-brownaccent-light font-medium">Kabinet Perjuangan</span>
+                    </div>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-6 font-semibold text-sm">
+                    <a href="#beranda" class="hover:text-brownaccent-light transition">Beranda</a>
+                    <a href="#profil" class="hover:text-brownaccent-light transition">Profil & Visi Misi</a>
+                    <a href="#proker" class="hover:text-brownaccent-light transition">Program Kerja</a>
+                    <a href="#pendaftaran" class="hover:text-brownaccent-light transition">Pendaftaran</a>
+                    <a href="#kontak" class="hover:text-brownaccent-light transition">Kontak</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-white hover:text-brownaccent-light focus:outline-none text-2xl">
+                        <i class="fa-solid fa-bars"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-maroon-dark px-4 pt-2 pb-4 border-t border-maroon">
+            <a href="#beranda" class="block py-2 hover:text-brownaccent-light">Beranda</a>
+            <a href="#profil" class="block py-2 hover:text-brownaccent-light">Profil & Visi Misi</a>
+            <a href="#proker" class="block py-2 hover:text-brownaccent-light">Program Kerja</a>
+            <a href="#pendaftaran" class="block py-2 hover:text-brownaccent-light">Pendaftaran</a>
+            <a href="#kontak" class="block py-2 hover:text-brownaccent-light">Kontak</a>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="beranda" class="py-16 px-4">
+        <div class="max-w-5xl mx-auto bg-gradient-to-r from-maroon-dark via-maroon to-maroon-dark p-8 md:p-12 rounded-2xl border-2 border-brownaccent shadow-2xl text-center">
+            <div class="flex justify-center mb-6">
+                <div class="bg-white p-3 md:p-4 rounded-xl border-2 border-brownaccent shadow-xl inline-block">
+                    <img src="Logo IMKS_3.png" alt="Banner Logo IMKS Cirebon" class="h-20 md:h-28 w-auto object-contain" onerror="this.src='https://via.placeholder.com/300x100?text=IMKS+CIREBON'">
+                </div>
+            </div>
+            <h1 class="text-3xl md:text-5xl font-black text-white tracking-wide uppercase mb-4">
+                IKATAN MAHASISWA KABUPATEN SUBANG (IMKS) CIREBON
+            </h1>
+            <p class="text-lg md:text-xl text-gray-200 max-w-3xl mx-auto mb-6">
+                Sekretariat : Perumahan GSP Jl. Jati III Atas Blok Q, Kelurahan Karyamulya, Kec. kesambi, Kota Cirebon Telp. 082315797432 (Imam)
+            </p>
+            <div class="inline-block bg-maroon-dark border border-brownaccent px-6 py-3 rounded-full">
+                <span class="text-brownaccent-light font-bold italic text-lg md:text-xl">
+                    "Sajiwa, Sarasa, Sasuhunan"
+                </span>
+            </div>
+        </div>
+    </section>
+
+    <!-- KETUA UMUM & SAMBUTAN -->
+    <section class="max-w-6xl mx-auto px-4 py-8 grid md:grid-cols-3 gap-8">
+        <div class="md:col-span-2 bg-maroon-dark/80 p-8 rounded-xl border-l-8 border-brownaccent border-t border-b border-r border-maroon-light shadow-lg">
+            <h2 class="text-2xl font-bold text-brownaccent-light mb-4 flex items-center gap-2">
+                <i class="fa-solid fa-landmark"></i> Tentang IMKS Cirebon
+            </h2>
+            <p class="text-gray-200 leading-relaxed mb-4">
+                Ikatan Keluarga Mahasiswa Subang Cirebon (IMKS) merupakan organisasi daerah yang menghimpun seluruh mahasiswa asal Kabupaten Subang yang sedang menempuh studi perguruan tinggi di Cirebon.
+            </p>
+            <p class="text-gray-200 leading-relaxed">
+                Berdasarkan asas kekeluargaan dan semangat kebersamaan, IMKS berkomitmen menjadi wadah pengembangan potensi akademis, sosial, serta kearifan lokal bagi para anggotanya.
+            </p>
+        </div>
+
+        <!-- Kartu Profil Ketua Umum -->
+        <div class="bg-maroon-dark/80 p-6 rounded-xl border border-brownaccent shadow-lg text-center flex flex-col items-center justify-center">
+            <div class="w-32 h-32 bg-maroon rounded-full overflow-hidden flex items-center justify-center mb-4 border-2 border-brownaccent shadow-md">
+                <img src="Foto_Ketum-removebg-preview.png" alt="Foto Ketua Umum IMKS Cirebon" class="w-full h-full object-cover object-top" onerror="this.src='https://via.placeholder.com/150?text=Ketua+Umum'">
+            </div>
+            <h3 class="text-xl font-bold text-white">Muhammad Imam Mahdi</h3>
+            <p class="text-brownaccent-light text-sm font-semibold mt-1">Ketua Umum IMKS Cirebon</p>
+            <p class="text-xs text-gray-300 mt-3 italic">"Bersama membangun sinergi mahasiswa Subang di perantauan."</p>
+        </div>
+    </section>
+
+    <!-- PROFIL & VISI MISI -->
+    <section id="profil" class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-extrabold text-brownaccent-light text-center mb-8 uppercase tracking-wide">
+            Profil & Visi Misi
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-maroon-dark/90 p-6 rounded-xl border-l-4 border-brownaccent shadow-md">
+                <h3 class="text-xl font-bold text-brownaccent-light mb-3">Visi</h3>
+                <p class="text-gray-200">
+                    Mewujudkan IMKS Cirebon sebagai wadah pemersatu mahasiswa Subang yang proaktif, berintegritas, berbudaya, serta berkontribusi aktif bagi kemajuan daerah dan masyarakat.
+                </p>
+            </div>
+            <div class="bg-maroon-dark/90 p-6 rounded-xl border-l-4 border-brownaccent shadow-md">
+                <h3 class="text-xl font-bold text-brownaccent-light mb-3">Misi</h3>
+                <ul class="list-disc list-inside text-gray-200 space-y-2">
+                    <li>Mempererat tali silaturahmi antar mahasiswa Subang di Cirebon.</li>
+                    <li>Mengembangkan potensi akademik dan non-akademik anggota.</li>
+                    <li>Melaksanakan pengabdian masyarakat berbasis kearifan lokal.</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PROGRAM KERJA -->
+    <section id="proker" class="max-w-6xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-extrabold text-brownaccent-light text-center mb-8 uppercase tracking-wide">
+            Program Kerja Unggulan
+        </h2>
+        <div class="grid md:grid-cols-2 gap-6">
+            <div class="bg-maroon-dark/80 p-6 rounded-xl border border-maroon-light border-l-4 border-l-brownaccent shadow-md">
+                <h3 class="text-xl font-bold text-white mb-2">Makrab & PRABU</h3>
+                <span class="bg-brownaccent text-white text-xs px-3 py-1 rounded-full font-bold">Divisi Kaderisasi</span>
+                <p class="text-gray-200 mt-3">Kegiatan penyambutan dan pengakraban mahasiswa baru asal Subang yang berkuliah di Cirebon.</p>
+            </div>
+            <div class="bg-maroon-dark/80 p-6 rounded-xl border border-maroon-light border-l-4 border-l-brownaccent shadow-md">
+                <h3 class="text-xl font-bold text-white mb-2">IMKS Mengabdi</h3>
+                <span class="bg-brownaccent text-white text-xs px-3 py-1 rounded-full font-bold">Divisi Pengabdian Masyarakat</span>
+                <p class="text-gray-200 mt-3">Bakti sosial, mengajar, dan pendampingan masyarakat di desa terpencil kawasan Subang dan Cirebon.</p>
+            </div>
+            <div class="bg-maroon-dark/80 p-6 rounded-xl border border-maroon-light border-l-4 border-l-brownaccent shadow-md">
+                <h3 class="text-xl font-bold text-white mb-2">Subang Cultural Festival</h3>
+                <span class="bg-brownaccent text-white text-xs px-3 py-1 rounded-full font-bold">Divisi Seni & Budaya</span>
+                <p class="text-gray-200 mt-3">Pentas seni dan kebudayaan khas Subang untuk mengenalkan kearifan lokal di wilayah Cirebon.</p>
+            </div>
+            <div class="bg-maroon-dark/80 p-6 rounded-xl border border-maroon-light border-l-4 border-l-brownaccent shadow-md">
+                <h3 class="text-xl font-bold text-white mb-2">Kajian & Diskusi Isu Daerah</h3>
+                <span class="bg-brownaccent text-white text-xs px-3 py-1 rounded-full font-bold">Divisi Humas & Kajian</span>
+                <p class="text-gray-200 mt-3">Diskusi rutin dan analisis kritis terkait isu-isu strategis serta kebijakan di Kabupaten Subang.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENDAFTARAN ANGGOTA (LANGSUNG TERSIMPAN KE GOOGLE SHEETS) -->
+    <section id="pendaftaran" class="max-w-4xl mx-auto px-4 py-12">
+        <div class="bg-maroon-dark p-8 rounded-2xl border-2 border-brownaccent shadow-2xl">
+            <h2 class="text-3xl font-extrabold text-brownaccent-light text-center mb-2 uppercase">
+                Pendataan Mahasiswa Subang
+            </h2>
+            <p class="text-center text-gray-200 mb-6">Bergabunglah bersama keluarga besar IMKS Cirebon!</p>
+
+            <!-- Pesan Sukses / Notifikasi -->
+            <div id="notifikasi" class="hidden p-4 mb-4 rounded-lg bg-green-700 text-white font-bold text-center">
+                <i class="fa-solid fa-circle-check mr-2"></i> Data berhasil dikirim! Terima kasih telah mengisi formulir.
+            </div>
+
+            <form id="formPendaftaran" class="space-y-4">
+                <div>
+                    <label class="block text-sm font-bold text-gray-200 mb-1">Nama Lengkap *</label>
+                    <input type="text" id="nama" required class="w-full p-3 rounded-lg bg-maroon text-white border border-brownaccent focus:outline-none focus:ring-2 focus:ring-brownaccent-light" placeholder="Masukkan nama lengkap">
+                </div>
+                <div class="grid md:grid-cols-2 gap-4">
+                    <div>
+                        <label class="block text-sm font-bold text-gray-200 mb-1">Kampus di Cirebon *</label>
+                        <input type="text" id="kampus" required class="w-full p-3 rounded-lg bg-maroon text-white border border-brownaccent focus:outline-none focus:ring-2 focus:ring-brownaccent-light" placeholder="Contoh: IAIN Cirebon / UMC / Unswagati">
+                    </div>
+                    <div>
+                        <label class="block text-sm font-bold text-gray-200 mb-1">Asal Kecamatan di Subang *</label>
+                        <input type="text" id="kecamatan" required class="w-full p-3 rounded-lg bg-maroon text-white border border-brownaccent focus:outline-none focus:ring-2 focus:ring-brownaccent-light" placeholder="Contoh: Jalancagak / Subang Kota">
+                    </div>
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-200 mb-1">No. WhatsApp *</label>
+                    <input type="tel" id="whatsapp" required class="w-full p-3 rounded-lg bg-maroon text-white border border-brownaccent focus:outline-none focus:ring-2 focus:ring-brownaccent-light" placeholder="08xxxxxxxxxx">
+                </div>
+                <div>
+                    <label class="block text-sm font-bold text-gray-200 mb-1">Alasan Ingin Bergabung</label>
+                    <textarea id="alasan" rows="3" class="w-full p-3 rounded-lg bg-maroon text-white border border-brownaccent focus:outline-none focus:ring-2 focus:ring-brownaccent-light" placeholder="Tuliskan motivasi kamu..."></textarea>
+                </div>
+
+                <button type="submit" id="btnKirim" class="w-full bg-brownaccent hover:bg-brownaccent-light hover:text-black text-white font-extrabold py-3 rounded-lg transition duration-300 shadow-lg text-lg uppercase tracking-wider mt-4 flex justify-center items-center gap-2">
+                    <span>Kirim Pendaftaran</span>
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- KONTAK & FOOTER -->
+    <footer id="kontak" class="bg-maroon-dark border-t-2 border-brownaccent mt-12 py-8 text-gray-300">
+        <div class="max-w-6xl mx-auto px-4 grid md:grid-cols-3 gap-8 mb-6">
+            <div>
+                <h4 class="text-xl font-bold text-brownaccent-light mb-3">IMKS Cirebon</h4>
+                <p class="text-sm">Ikatan Keluarga Mahasiswa Subang Cirebon.</p>
+                <p class="text-xs text-gray-400 mt-2">Sajiwa, Sarasa, Sasuhunan.</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold text-brownaccent-light mb-3">Sekretariat</h4>
+                <p class="text-sm"><i class="fa-solid fa-location-dot mr-2 text-brownaccent-light"></i> Perumahan GSP Jl. Jati III Atas Blok Q, Kelurahan Karyamulya, Kec. kesambi, Kota Cirebon</p>
+            </div>
+            <div>
+                <h4 class="text-xl font-bold text-brownaccent-light mb-3">Kontak Resmi</h4>
+                <p class="text-sm mb-2"><i class="fa-solid fa-envelope mr-2 text-brownaccent-light"></i> imks.cirebon16@gmail.com</p>
+                
+                <!-- Tautan Instagram -->
+                <p class="text-sm mb-2">
+                    <a href="https://www.instagram.com/imks_cirebon?stkn=MWprOGs3dnUwcHJ2eA==" target="_blank" class="hover:text-brownaccent-light transition inline-flex items-center gap-2">
+                        <i class="fa-brands fa-instagram text-lg text-brownaccent-light"></i> Instagram: @imks_cirebon
+                    </a>
+                </p>
+                
+                <!-- Tautan TikTok -->
+                <p class="text-sm">
+                    <a href="https://www.tiktok.com/@imks_cirebon?_r=1&_t=ZS-9ADcOYFQVJI" target="_blank" class="hover:text-brownaccent-light transition inline-flex items-center gap-2">
+                        <i class="fa-brands fa-tiktok text-lg text-brownaccent-light"></i> TikTok: @imks_cirebon
+                    </a>
+                </p>
+            </div>
+        </div>
+        <div class="border-t border-maroon pt-4 text-center text-xs text-gray-400">
+            &copy; 2026 Ikatan Keluarga Mahasiswa Subang Cirebon. All Rights Reserved.
+        </div>
+    </footer>
+
+    <!-- JAVASCRIPT INTEGRASI GOOGLE SHEETS -->
+    <script>
+        // TOGGLE MOBILE MENU
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // URL GOOGLE APPS SCRIPT BERAKHIRAN /exec
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbx0Uq7BCZrkjoozS6tP7fz-3PK9Je2VNVPLvJ9UaOqbJ3vy9zK_WIuQrib6WC4OCqs3/exec';
+
+        const form = document.getElementById('formPendaftaran');
+        const btnKirim = document.getElementById('btnKirim');
+        const notifikasi = document.getElementById('notifikasi');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            
+            // Ubah tampilan tombol saat mengirim
+            btnKirim.disabled = true;
+            btnKirim.innerHTML = `<i class="fa-solid fa-spinner fa-spin"></i> Mengirim Data...`;
+
+            const dataPendaftar = {
+                nama: document.getElementById('nama').value,
+                kampus: document.getElementById('kampus').value,
+                kecamatan: document.getElementById('kecamatan').value,
+                whatsapp: document.getElementById('whatsapp').value,
+                alasan: document.getElementById('alasan').value
+            };
+
+            fetch(scriptURL, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify(dataPendaftar)
+            })
+            .then(() => {
+                // Tampilkan notifikasi berhasil
+                notifikasi.classList.remove('hidden');
+                form.reset();
+                btnKirim.disabled = false;
+                btnKirim.innerHTML = `Kirim Pendaftaran`;
+                
+                // Sembunyikan notifikasi setelah 5 detik
+                setTimeout(() => {
+                    notifikasi.classList.add('hidden');
+                }, 5000);
+            })
+            .catch(error => {
+                alert('Terjadi kesalahan saat mengirim data. Silakan coba lagi.');
+                btnKirim.disabled = false;
+                btnKirim.innerHTML = `Kirim Pendaftaran`;
+            });
+        });
+    </script>
+</body>
+</html>
